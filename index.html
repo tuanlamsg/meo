@@ -11,7 +11,7 @@ body{display:grid;place-items:center;text-align:center}img{width:96px;height:96p
 </head><body><div><img src="icon-192.png" alt=""><p id="m">Đang mở Meo meo money…</p></div>
 <script>
 /* Dán link web app Apps Script của bạn (dạng https://script.google.com/macros/s/.../exec) vào giữa hai dấu nháy */
-const APP_URL = 'https://script.google.com/macros/s/AKfycbw6AYnBqEmNRRoz4mPkN_Bzz-aWIs4CRmZVEKLlR8-Jh6l0MiGltGKx7yujRqYWB2XJPg/exec';
+const APP_URL = 'https://script.google.com/macros/s/AKfycbywJKR6s9unRQ_eLIClkuhdPd9ZUnYfCIvfMmI4qBxv4TCs6iz3-8O7nPjkabzQEGcCyA/exec';
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 /* Mở trang với ?setup=1 để tạo shortcut mà không bị chuyển đi ngay */
 if (location.search.indexOf('setup') >= 0) document.getElementById('m').innerHTML = 'Chế độ tạo shortcut.<br>Mở menu ⋮ của Chrome rồi chọn "Thêm vào màn hình chính" hoặc "Cài đặt ứng dụng".';
