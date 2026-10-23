@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meo meo money</title>
+<meta name="theme-color" content="#300c41">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>html,body{margin:0;height:100%;background:#300c41;color:#f8f1fe;font-family:system-ui,sans-serif}
+body{display:grid;place-items:center;text-align:center}img{width:96px;height:96px;border-radius:24px}p{opacity:.8}a{color:#dee948}</style>
+</head><body><div><img src="icon-192.png" alt=""><p id="m">Đang mở Meo meo money…</p></div>
+<script>
+/* Dán link web app Apps Script của bạn (dạng https://script.google.com/macros/s/.../exec) vào giữa hai dấu nháy */
+const APP_URL = '';
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+/* Mở trang với ?setup=1 để tạo shortcut mà không bị chuyển đi ngay */
+if (location.search.indexOf('setup') >= 0) document.getElementById('m').innerHTML = 'Chế độ tạo shortcut.<br>Mở menu ⋮ của Chrome rồi chọn "Thêm vào màn hình chính" hoặc "Cài đặt ứng dụng".';
+else if (APP_URL) location.replace(APP_URL);
+else document.getElementById('m').textContent = 'Chưa điền APP_URL trong index.html';
+</script></body></html>
